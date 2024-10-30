@@ -1,1 +1,2 @@
-# elevation-profile-plugin-v2
+# elevation-profile-plugin
+Elevation profile plugin for Origo. 

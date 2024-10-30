@@ -1,0 +1,39 @@
+{
+  "name": "elevation-profile",
+  "version": "2.0.0",
+  "description": "",
+  "main": "elevation-profile.js",
+  "scripts": {
+    "start": "npm run watch-js",
+    "watch-js": "webpack-dev-server --config ./tasks/webpack.dev.js --mode development",
+    "build": "webpack --config ./tasks/webpack.prod.js && npm run build-sass",
+	"build-sass": "node-sass --include-path scss scss/elevation-profile.scss build/css/elevation-profile.css",
+    "build-js-analyze": "webpack --config ./tasks/webpack.analyze.js"
+  },
+  "author": "jokd",
+  "license": "MIT",
+  "dependencies": {
+    "ol-ext": "4.0.24",
+    "ol": "10.2.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "compression-webpack-plugin": "^10.0.0",
+    "css-loader": "^6.7.1",
+    "eslint": "^9.13.0",
+    "exports-loader": "^4.0.0",
+    "globals": "^15.11.0",
+    "imports-loader": "^4.0.0",
+    "node-sass": "^9.0.0",
+    "postcss-loader": "^7.0.1",
+    "sass-loader": "^13.0.2",
+    "source-map-loader": "^3.0.1",
+    "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.3.3",
+    "webpack": "^5.73.0",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.9.3",
+    "webpack-merge": "^5.8.0"
+  }
+}
